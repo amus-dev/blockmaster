@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+//fonts
+@mixin fontMontserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+//fonts Sizes
+@mixin font-h1 {
+  @include fontMontserrat;
+  font-size: 2.875rem;
+  font-weight: 800;
+}
+
+@mixin font-h2 {
+  @include fontMontserrat;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@mixin font-h3 {
+  @include fontMontserrat;
+  font-size: 2.313rem;
+  font-weight: bold;
+}
+
+@mixin font-h4 {
+  @include fontMontserrat;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+@mixin font-h5 {
+  @include fontMontserrat;
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+.font-regular {
+  @include fontMontserrat;
+  font-size: 18px;
+}
+
+.font-regular-bold {
+  @include fontMontserrat;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.font-regular-second {
+  @include fontMontserrat;
+  font-size: 1rem;
+}
+
+.font-regular-second-bold {
+  @include fontMontserrat;
+  font-size: 1rem;
+  font-weight: bold;
+}
