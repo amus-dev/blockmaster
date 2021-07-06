@@ -14,13 +14,11 @@ _Debe instalar todas las dependencias del proyecto_
 npm install || yarn add
 ```
 
-_Obtener su API KEY en [TheMovieDB](https://developers.themoviedb.org/3) y configurar la variable_
+_Obtener su API KEY en [TheMovieDB](https://developers.themoviedb.org/3) y configurar la variable dentro del archivo api/config.js_
 
 ```
 const API_KEY = API_KEY
 ```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Despliegue 📦
 
@@ -34,13 +32,9 @@ npm run start || yarn start
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-- [React JS](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+- [React JS](https://es.reactjs.org/) - El framework web usado
 - [Api TheMovieDB](https://developers.themoviedb.org/3) - API TheMovieDB
 
 ## Autores ✒️
 
-- **Alexander Urrutia** - _Trabajo Inicial_ - [amusdev](https://github.com/mts4)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+- **Alexander Urrutia** - [amusdev](https://github.com/mts4)
