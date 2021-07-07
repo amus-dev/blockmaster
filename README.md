@@ -14,7 +14,7 @@ _Debe instalar todas las dependencias del proyecto_
 npm install || yarn add
 ```
 
-_Obtener su API KEY en [TheMovieDB](https://developers.themoviedb.org/3) y crear el archivo .env.local con su API KEY_
+_Obtener su API KEY en [TheMovieDB](https://developers.themoviedb.org/3) y editar el archivo .env con su API KEY_
 
 ```
 REACT_APP_API_KEY= <<YOUR_API_KEY>>
