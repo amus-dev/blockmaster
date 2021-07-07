@@ -1,0 +1,19 @@
+@import "../../theme/sass/style.scss";
+
+.menu {
+  .navbar-nav {
+    .nav-link {
+      color: $white !important;
+      transition: color 0.5s ease-in-out;
+      @include font-regular-second-bold;
+      &:hover {
+        color: $yellow !important;
+      }
+    }
+  }
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      background-image: url("../../theme/images/icons/ico-menu.svg");
+    }
+  }
+}
