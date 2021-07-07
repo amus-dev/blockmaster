@@ -1,0 +1,52 @@
+@import "../../theme/sass/style.scss";
+
+.carousel {
+  margin-top: 2rem;
+  &__cover {
+    display: flex;
+    min-height: 400px;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    &-btn {
+      position: relative;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      background-color: $black;
+      color: $yellow;
+      border: 1px solid $yellow;
+      @include font-regular-second-bold;
+      text-transform: uppercase;
+      padding: 10px 24px 10px 54px;
+      border-radius: 4px;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../../theme/images/icons/ico-play-yellow.svg");
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        left: 15px;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover {
+        background-color: $yellow;
+        color: $black;
+        border: 1px solid $yellow;
+        text-decoration: none;
+        &::before {
+          background-image: url("../../theme/images/icons/ico-play-black.svg");
+        }
+      }
+    }
+  }
+  .slide {
+    .carousel-indicators {
+      bottom: -80px;
+    }
+  }
+}
