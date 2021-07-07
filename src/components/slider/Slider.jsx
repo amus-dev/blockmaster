@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { getMoviesPopular, getMovieVideoYT } from "../../utils/api/movies";
-import { Link } from "react-router-dom";
 import "./slider.style.scss";
 
 const Slider = () => {
