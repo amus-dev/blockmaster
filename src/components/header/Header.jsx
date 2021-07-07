@@ -3,12 +3,16 @@ import { Navbar } from "react-bootstrap";
 import Logo from "./logo/";
 import "./header.styles.scss";
 import Menu from "./menu";
+import Search from "./search";
 
 const Header = () => {
   return (
     <Navbar className="menu" expand="lg">
       <Logo />
-      <Menu />
+      <div className="menu__nav">
+        <Menu />
+        <Search />
+      </div>
     </Navbar>
   );
 };

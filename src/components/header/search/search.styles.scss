@@ -1,0 +1,58 @@
+@import "../../../theme/sass/style.scss";
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  @media (max-width: 991px) {
+    position: absolute;
+    transform: translateX(-130%);
+    z-index: 9;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    background-color: $blackLight;
+    height: 10vh;
+    top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__input {
+    width: 100%;
+    border-radius: 8px 0px 0px 8px;
+    @include font-regular-second;
+    padding: 11px 12px;
+    border: 1px solid $yellow;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn {
+    background-color: $yellow;
+    border: none;
+    background-image: url(../../../theme/images/icons/ico-search.svg);
+    background-size: 30px;
+    width: 72px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.5s ease-in-out;
+    &:hover {
+      background-color: $yellowHover;
+    }
+  }
+  &.open {
+    transform: translateX(5%);
+  }
+  &__closeSearch {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+      background-color: transparent;
+      border: none;
+      background-image: url(../../../theme/images/icons/ico-arrow.svg);
+      background-size: 30px;
+      width: 72px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

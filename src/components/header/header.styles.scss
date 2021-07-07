@@ -1,6 +1,36 @@
 @import "../../theme/sass/style.scss";
 
 .menu {
+  .menu__nav {
+    display: flex;
+    width: 100%;
+    @media (max-width: 991px) {
+      flex-direction: row-reverse;
+      width: auto;
+    }
+    .search__openSearch {
+      display: none;
+      @media (max-width: 991px) {
+        display: block;
+        background-color: transparent;
+        border: none;
+        background-image: url("../../theme/images/icons/icon-search-yellow.svg");
+        background-size: 30px;
+        width: 72px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .navbar-collapse {
+      width: 100%;
+      @media (max-width: 991px) {
+        position: absolute;
+        top: 5rem;
+        text-align: end;
+      }
+    }
+  }
+
   .navbar-nav {
     .nav-link {
       color: $white !important;
@@ -12,6 +42,8 @@
     }
   }
   .navbar-toggler {
+    border: none;
+    padding: 0px;
     .navbar-toggler-icon {
       background-image: url("../../theme/images/icons/ico-menu.svg");
     }
