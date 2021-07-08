@@ -1,10 +1,16 @@
 import React from "react";
-import LayoutPopulars from "../layouts/LayoutPopulars";
+import LayoutHome from "../layouts/home/LayoutHome";
+import LayoutMovies from "../layouts/movie/LayoutMovies";
 import { useParams } from "react-router-dom";
 
 const PopularMovies = (props) => {
   console.log(useParams());
-  return <LayoutPopulars />;
+  return (
+    <>
+      <LayoutHome />
+      <LayoutMovies />
+    </>
+  );
 };
 
 export default PopularMovies;

@@ -1,0 +1,44 @@
+@import "../../../theme/sass/style.scss";
+
+.cardMovie {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  &__cover {
+    position: relative;
+    max-height: 570px;
+  }
+  &__score {
+    position: absolute;
+    display: flex;
+    top: 5rem;
+    background: $black;
+    backdrop-filter: blur(130px);
+    opacity: 0.64;
+    border-top: 3px solid $blue;
+    border-bottom: 3px solid $blue;
+    border-right: 3px solid $blue;
+    border-radius: 0px 50px 50px 0px;
+    padding: 15px;
+    align-items: center;
+    &.goodScore {
+      border-top: 3px solid $yellow;
+      border-bottom: 3px solid $yellow;
+      border-right: 3px solid $yellow;
+    }
+    &-star {
+      background-image: url(../../../theme/images/icons/ico-star.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 24px;
+      height: 24px;
+    }
+    &-number {
+      color: $white;
+      margin: 0px;
+      @include font-h4;
+      padding-left: 10px;
+    }
+  }
+}

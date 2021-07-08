@@ -1,0 +1,9 @@
+@import "../../theme/sass/style.scss";
+
+.movies {
+  &__title {
+    color: $white;
+    @include font-h2;
+    margin-bottom: 2rem;
+  }
+}

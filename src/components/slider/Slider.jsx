@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { getMoviesPopular, getMovieVideoYT } from "../../utils/api/movies";
+import { getMoviesNowPlaying, getMovieVideoYT } from "../../utils/api/movies";
 import { BASE_URL_BANNER } from "../../utils/api/const";
 import "./slider.style.scss";
 
@@ -11,7 +11,7 @@ const Slider = () => {
   }, []);
 
   const setDataThirdTopMovies = async () => {
-    const data = await getMoviesPopular();
+    const data = await getMoviesNowPlaying();
     const topThirdMovie = data.results.slice(0, 3);
     setTopMovies(topThirdMovie);
   };
