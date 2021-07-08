@@ -45,8 +45,11 @@
     }
   }
   .slide {
+    display: flex;
+    flex-direction: column-reverse;
     .carousel-indicators {
-      bottom: -80px;
+      position: relative;
+      margin-top: 2rem;
     }
   }
 }
