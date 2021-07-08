@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./theme/sass/style.scss";
 
 const App = () => {
+  console.log(process.env);
   return (
     <div className="App">
       <Routes />
