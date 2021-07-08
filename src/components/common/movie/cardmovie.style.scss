@@ -21,6 +21,9 @@
     border-radius: 0px 50px 50px 0px;
     padding: 15px;
     align-items: center;
+    @media (max-width: 991px) {
+      padding: 5px;
+    }
     &.goodScore {
       border-top: 3px solid $yellow;
       border-bottom: 3px solid $yellow;
@@ -39,6 +42,9 @@
       margin: 0px;
       @include font-h4;
       padding-left: 10px;
+      @media (max-width: 991px) {
+        font-size: 1rem;
+      }
     }
   }
 }

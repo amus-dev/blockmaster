@@ -1,6 +1,6 @@
 # Blockmaster
 
-_Proyecto para desplegar un pool de películas consumiendo el API de TheMovieDB para obtener todas las películas a publicar_
+_Proyecto para desplegar un pool de películas consumiendo el API de TheMovieDB para obtener todas las películas a publicar, puedes visualizar el sitio desplegado [aquí](https://blockmaster-amusdev.vercel.app/)_
 
 ## Comenzando 🚀
 

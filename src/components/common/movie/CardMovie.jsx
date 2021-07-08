@@ -5,7 +5,7 @@ import "./cardmovie.style.scss";
 const CardMovie = ({ movie }) => {
   const { poster_path, vote_average } = movie;
   return (
-    <Col md={3}>
+    <Col md={3} xs={6}>
       <div className="cardMovie">
         <Image
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
