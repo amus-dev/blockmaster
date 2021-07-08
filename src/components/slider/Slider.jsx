@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { getMoviesPopular, getMovieVideoYT } from "../../utils/api/movies";
+import { BASE_URL_BANNER } from "../../utils/api/const";
 import "./slider.style.scss";
 
 const Slider = () => {
@@ -23,13 +24,13 @@ const Slider = () => {
 
   return (
     <section className="carousel">
-      <Carousel controls={false}>
+      <Carousel controls={false} fade={true} interval={4000}>
         {topMovies.map((movie, index) => (
           <Carousel.Item key={index}>
             <div
               className="carousel__cover"
               style={{
-                backgroundImage: `url("https://image.tmdb.org/t/p/w1920_and_h427_multi_faces/${movie.backdrop_path}")`,
+                backgroundImage: `url("${BASE_URL_BANNER}${movie.backdrop_path}")`,
               }}
             >
               <span

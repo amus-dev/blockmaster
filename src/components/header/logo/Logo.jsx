@@ -1,12 +1,12 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
 import LogoBlockMaster from "../../../theme/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Navbar.Brand href="#home">
+    <Link to={`/`}>
       <img src={LogoBlockMaster} alt="Logo del sitio BlockMaster" />
-    </Navbar.Brand>
+    </Link>
   );
 };
 
