@@ -81,3 +81,23 @@ export const getMovieBySearch = (movie) => {
       console.log(err);
     });
 };
+
+export const getMoviesByGenre = (genre) => {
+  const url = `${API_HOST}/discover/movie?api_key=${API_KEY}&page=1&with_genres=${genre}`;
+  const params = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

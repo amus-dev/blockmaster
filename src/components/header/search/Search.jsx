@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { MoviesContext } from "../../../context/MoviesContext";
 import "./search.styles.scss";
 
 const Search = () => {
+  const { searchByMovie, setDataMovies } = useContext(MoviesContext);
   const [open, setOpen] = useState(false);
+  const [searchMovie, setSearchMovie] = useState("");
   const handleClickOpenMenu = (open) => {
     setOpen(open);
+  };
+
+  const handleSubmitSearch = (e) => {
+    e.preventDefault();
+    searchByMovie(searchMovie);
+  };
+
+  const handleChangeInputSearch = (e) => {
+    const { value } = e.target;
+    value ? setSearchMovie(value) : setDataMovies();
   };
   return (
     <>
@@ -12,7 +25,10 @@ const Search = () => {
         className="search__openSearch"
         onClick={() => handleClickOpenMenu(true)}
       />
-      <form className={`search ${open ? "open" : ""}`}>
+      <form
+        className={`search ${open ? "open" : ""}`}
+        onSubmit={handleSubmitSearch}
+      >
         <span
           className="search__closeSearch"
           onClick={() => handleClickOpenMenu(false)}
@@ -23,6 +39,7 @@ const Search = () => {
           id="inputSearch"
           className="search__input"
           placeholder="Busca tu pelicula favorita"
+          onChange={handleChangeInputSearch}
         />
         <button type="submit" className="search__btn" id="btnSearch" />
       </form>

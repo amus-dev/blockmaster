@@ -1,5 +1,9 @@
 import React, { createContext, useState } from "react";
-import { getMoviesPopular } from "../utils/api/movies";
+import {
+  getMoviesPopular,
+  getMovieBySearch,
+  getMoviesByGenre,
+} from "../utils/api/movies";
 
 export const MoviesContext = createContext();
 
@@ -17,6 +21,16 @@ export const MoviesProvider = ({ children }) => {
     setIsVisibleModalMovie(visible);
     setModalMovie(movie);
   };
+
+  const searchByMovie = async (movie) => {
+    const data = await getMovieBySearch(movie);
+    setMovies(data.results);
+  };
+
+  const searchByGenre = async (genre) => {
+    const data = await getMoviesByGenre(genre);
+    setMovies(data.results);
+  };
   return (
     <div>
       <MoviesContext.Provider
@@ -27,6 +41,8 @@ export const MoviesProvider = ({ children }) => {
           setIsVisibleModalMovie,
           isOpenModalMovies,
           modalMovie,
+          searchByMovie,
+          searchByGenre,
         }}
       >
         {children}

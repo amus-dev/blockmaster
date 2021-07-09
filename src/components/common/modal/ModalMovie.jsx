@@ -1,19 +1,25 @@
-import React, { useContext } from "react";
-import { Modal, Row, Col, Image } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { Modal, Row, Col, Image, Alert } from "react-bootstrap";
 import { MoviesContext } from "../../../context/MoviesContext";
 import { getMovieVideoYT } from "../../../utils/api/movies";
 
 import "./modalmovie.styles.scss";
 
 const ModalMovie = () => {
+  const [error, setError] = useState("");
+  const [show, setShow] = useState(true);
   const { isOpenModalMovies, isVisibleModalMovie, modalMovie } =
     useContext(MoviesContext);
   const { id, poster_path, title, overview } = modalMovie;
 
   const openVideoYT = async (id) => {
-    const data = await getMovieVideoYT(id);
-    const { key } = data.results[0];
-    window.open(`https://www.youtube.com/watch?v=${key}`);
+    try {
+      const data = await getMovieVideoYT(id);
+      const { key } = data.results[0];
+      window.open(`https://www.youtube.com/watch?v=${key}`);
+    } catch (error) {
+      setError("No existe video vinculado a esta pelicula.");
+    }
   };
   return (
     <Modal
@@ -43,6 +49,15 @@ const ModalMovie = () => {
               >
                 Ver Ahora
               </span>
+              {error && (
+                <Alert
+                  variant="danger"
+                  onClose={() => setError("")}
+                  dismissible
+                >
+                  {error}
+                </Alert>
+              )}
             </div>
           </Col>
         </Row>
