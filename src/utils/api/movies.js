@@ -21,8 +21,9 @@ export const getMoviesNowPlaying = () => {
     });
 };
 
-export const getMoviesPopular = () => {
-  const url = `${API_HOST}/movie/popular?api_key=${API_KEY}&language=${LANG}`;
+export const getMoviesPopular = (paginate = 1) => {
+  console.log(paginate);
+  const url = `${API_HOST}/movie/top_rated?api_key=${API_KEY}&language=${LANG}&page=${paginate}`;
   const params = {
     method: "GET",
     headers: {

@@ -1,13 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import LayoutHome from "../layouts/home/LayoutHome";
-import LayoutMovies from "../layouts/movie/LayoutMovies";
+import LayoutDefault from "../layouts/LayoutDefault";
 
 const Home = () => {
   return (
     <Container fluid>
-      <LayoutHome />
-      <LayoutMovies />
+      <LayoutDefault />
     </Container>
   );
 };

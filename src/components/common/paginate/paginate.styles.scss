@@ -1,0 +1,39 @@
+@import "../../../theme/sass/style.scss";
+
+.paginate {
+  display: flex;
+  width: 100%;
+  .pagination {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    @media (max-width: 768px) {
+      justify-content: space-evenly;
+    }
+    li {
+      a {
+        @include font-regular-bold;
+        color: $white;
+        text-transform: uppercase;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: color 0.5s ease-in-out;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      &.active {
+        a {
+          color: $yellow;
+        }
+      }
+      @media (max-width: 768px) {
+        display: none;
+        &.previous,
+        &.next {
+          display: block;
+        }
+      }
+    }
+  }
+}

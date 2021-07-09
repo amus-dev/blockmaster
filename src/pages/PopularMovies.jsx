@@ -1,14 +1,12 @@
 import React from "react";
-import LayoutHome from "../layouts/home/LayoutHome";
-import LayoutMovies from "../layouts/movie/LayoutMovies";
+import LayoutDefault from "../layouts/LayoutDefault";
 import { useParams } from "react-router-dom";
 
-const PopularMovies = (props) => {
+const PopularMovies = () => {
   console.log(useParams());
   return (
     <>
-      <LayoutHome />
-      <LayoutMovies />
+      <LayoutDefault />
     </>
   );
 };
