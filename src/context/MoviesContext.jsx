@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { getMoviesPopular } from "../utils/api/movies";
 
 export const MoviesContext = createContext();
