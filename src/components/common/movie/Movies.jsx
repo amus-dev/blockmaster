@@ -9,7 +9,7 @@ const Movies = () => {
   const { setDataMovies, movies } = useContext(MoviesContext);
   useEffect(() => {
     setDataMovies();
-  }, [movies]);
+  }, []);
   return (
     <section className="movies">
       <h1 className="movies__title">Todas las peliculas</h1>
