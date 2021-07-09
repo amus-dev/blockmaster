@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  filter: brightness(30%);
+  transition: filter 0.5s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(100%);
+  }
   &__cover {
     position: relative;
     max-height: 570px;

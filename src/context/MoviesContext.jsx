@@ -5,10 +5,17 @@ export const MoviesContext = createContext();
 
 export const MoviesProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
+  const [isVisibleModalMovie, setIsVisibleModalMovie] = useState(false);
+  const [modalMovie, setModalMovie] = useState([]);
 
   const setDataMovies = async (paginate) => {
     const data = await getMoviesPopular(paginate);
     setMovies(data.results);
+  };
+
+  const isOpenModalMovies = (movie, visible) => {
+    setIsVisibleModalMovie(visible);
+    setModalMovie(movie);
   };
   return (
     <div>
@@ -16,6 +23,10 @@ export const MoviesProvider = ({ children }) => {
         value={{
           setDataMovies,
           movies,
+          isVisibleModalMovie,
+          setIsVisibleModalMovie,
+          isOpenModalMovies,
+          modalMovie,
         }}
       >
         {children}
