@@ -1,0 +1,39 @@
+@import "../../../theme/sass/style.scss";
+.preload {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transform: translateX(0);
+  background-color: $blackLight;
+  &.is-hidden {
+    transform: translateX(100%);
+    transition: transform ease-out 0.3s;
+  }
+  .preload__logo {
+    max-width: 300px;
+    animation: scalePulse 3s infinite;
+    width: 100%;
+    @media (max-width: 600px) {
+      max-width: 250px;
+    }
+  }
+}
+
+@keyframes scalePulse {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}

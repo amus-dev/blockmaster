@@ -7,7 +7,6 @@ import "./modalmovie.styles.scss";
 
 const ModalMovie = () => {
   const [error, setError] = useState("");
-  const [show, setShow] = useState(true);
   const { isOpenModalMovies, isVisibleModalMovie, modalMovie } =
     useContext(MoviesContext);
   const { id, poster_path, title, overview } = modalMovie;

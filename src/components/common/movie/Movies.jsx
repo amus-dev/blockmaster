@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { Row } from "react-bootstrap";
 import "./movies.styles.scss";
 import CardMovie from "./CardMovie";
@@ -15,7 +15,7 @@ const Movies = () => {
     } else {
       setDataMovies();
     }
-  }, [genre]);
+  }, [id]);
   return (
     <section className="movies">
       <h1 className="movies__title">
